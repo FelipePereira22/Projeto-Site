@@ -1,0 +1,195 @@
+/*Colocar fontes aqui*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pochaevsk&display=swap');
+
+:root{
+    --fonte-titulo: "Pochaevsk", serif;
+    --fonte-paragrafo: "Montserrat", serif;
+}
+
+/*
+Paleta do site:
+
+#8C0404
+#8E443D
+#D92323
+#0D0D0D
+
+gradiente: 
+#6A6869
+#150B0A
+#100E0F
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../assets/fundo1.jpg) #000 no-repeat bottom ;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    backdrop-filter: blur(10px); 
+    border: 2px solid #E0D0C1;
+    border-radius: 5px;
+    width: 420px;
+    height: 400px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;  
+}
+
+
+#titulo-principal{
+    font-family: var(--fonte-titulo);
+    text-align: center;
+    color: #F2EDE4;
+    font-size: 2em;
+    padding: 10px 0 0 0;
+
+}
+
+#subtitulo-principal{
+    font-family: var(--fonte-paragrafo);
+    text-align: center;
+    color: #F2EDE4;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.input-box{
+    text-align: center;
+    margin: 10px 0 10px 0; 
+}
+
+
+.input-box input{
+    background: transparent;
+    color: #F2EDE4;
+    width: 250px;
+    padding: 7px;
+    border-radius: 10px;
+    border: 2px solid #6A6869;
+    box-shadow: rgba(7, 7, 7, 0.3) 0px 3px 6px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 4px;
+    
+}
+
+.input-box input::placeholder{
+    color: #F2EDE4;
+    font-family: var(--fonte-paragrafo);
+}
+
+.input-box input:focus{
+    outline: none;
+}
+
+.usuario{
+    position: absolute;
+    right: 22%;
+    top: 31%;
+    color: #F2EDE4;
+}
+
+.senha{
+    position: absolute;
+    right: 22%;
+    top: 42%;
+    color: #F2EDE4;
+}
+
+#btlogar{
+    text-align: center;
+}
+
+#btlogar button{
+    width: 250px;
+    margin-top: 15px;
+    border-radius: 7px;
+    border: 2px solid #6A6869;
+    background-color: transparent;
+    color: #F2EDE4;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+#btlogar button:hover{
+    transform: translateY(-10%);
+    box-shadow: rgba(7, 7, 7, 0.3) 0px 3px 6px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 4px;
+}
+
+#btlogar img{
+    width: 28px;
+    height: 28px;
+    text-align: end;
+}
+
+#recupera-senha{
+    font-family: var(--fonte-paragrafo);
+    font-size: 13px;
+    position: relative;
+    left: 50%;
+    
+}
+
+#recupera-senha a{
+    color: #F2EDE4;
+    text-decoration: none;
+    transition: 0.8s;
+}
+
+#recupera-senha a:hover{
+    color: #D92323;
+    border-bottom: 1px solid #D92323;
+    padding-bottom: 1px;
+}
+
+#linha-separacao{
+    border-bottom: 1px solid #b8b8b8;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+#paragrafo-cadastra{
+    font-family: var(--fonte-titulo);
+    color: #b8b8b8;
+    text-align: center;
+    padding: 10px 0 8px 0;
+}
+
+#cadastra{
+ text-align: center;
+ margin: 5px 0;
+}
+
+#cadastra button{
+    background: none;
+    border: none;
+}
+
+#cadastra a{
+    color: #F2EDE4;
+    text-decoration: none;
+    font-family: var(--fonte-paragrafo);
+    font-size: 13px;
+    border: 1px solid #6A6869;
+    border-radius: 7px;
+    padding: 10px;
+    transition: 0.6s;
+}
+
+#cadastra a:hover{
+    background: #6A6869;
+    color: #F2EDE4;
+    transform: translateY(-10%);
+    box-shadow: rgba(7, 7, 7, 0.3) 0px 3px 6px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 4px;
+}

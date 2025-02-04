@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/stylemain.css">
+    <title>Principal</title>
+</head>
+<body>
+
+        <main id="container">
+            
+                <h1 id="titulo-principal">Login</h1>
+                <p id="subtitulo-principal">Faça login ou cadastre-se!</p>
+                <form action="#" method="get" >
+                    <div class="input-box">
+                        <input type="text" name="nlogin" id="ilogin" required autocomplete="on" placeholder="Usuário">
+                        <label for="ilogin"><span class="material-icons usuario">person</span></label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="nsenha" id="isenha" required autocomplete="off" placeholder="Senha">
+                        <label for="isenha"><span class="material-icons senha">lock</span></label>
+                    </div>
+
+                    <div id="recupera-senha">
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>                
+                    
+                    <div id="btlogar">
+                        <button type="submit" name="btentrar"><img src="./assets/icon-logar.png"></button>
+                    </div>
+
+                    <div id="linha-separacao"></div>
+
+                    <p id="paragrafo-cadastra"> Não tem conta? </p>
+                    <div id="cadastra"><button><a href="#">Cadastre-se</a></button></div>
+                </form>
+
+        </main>
+
+</body>
+</html>
