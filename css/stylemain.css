@@ -39,6 +39,7 @@ body{
     backdrop-filter: blur(10px); 
     border: 2px solid #E0D0C1;
     border-radius: 5px;
+    box-shadow: rgba(255, 81, 81, 0.24) 0px 3px 8px;
     width: 420px;
     height: 400px;
     display: flex;
