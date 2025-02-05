@@ -2,8 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pochaevsk&display=swap');
 
 :root{
-    --fonte-titulo: "Pochaevsk", serif;
-    --fonte-paragrafo: "Montserrat", serif;
+    --fonte-principal: "Montserrat", serif;
 }
 
 /*
@@ -26,171 +25,310 @@ gradiente:
     box-sizing: border-box;
 }
 
-body{
-    background: url(../assets/fundo1.jpg) #000 no-repeat bottom ;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@media screen and (max-width: 768px) {
+    body{
+        background: linear-gradient(#6A6869, #150B0A, #100E0F);
+        height: 100vh;
+        display: flex;
+        flex-flow: nowrap;
+        flex: 0 0;
+        justify-content: center;
+        align-items: center;
+    }
 
-#container{
-    backdrop-filter: blur(10px); 
-    border: 2px solid #E0D0C1;
-    border-radius: 5px;
-    box-shadow: rgba(255, 81, 81, 0.24) 0px 3px 8px;
-    width: 420px;
-    height: 400px;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-content: center;  
-}
+    #container{
+        border: 2px solid #E0D0C1;
+        border-radius: 5px;
+        box-shadow: rgba(158, 5, 5, 0.6) 0px 3px 8px;
+        width: 400px;
+        height: 380px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-content: center;  
+    }
 
-
-#titulo-principal{
-    font-family: var(--fonte-titulo);
-    text-align: center;
-    color: #F2EDE4;
-    font-size: 2em;
-    padding: 10px 0 0 0;
-
-}
-
-#subtitulo-principal{
-    font-family: var(--fonte-paragrafo);
-    text-align: center;
-    color: #F2EDE4;
-    font-size: 15px;
-    padding: 10px 0;
-}
-
-.input-box{
-    text-align: center;
-    margin: 10px 0 10px 0; 
-}
-
-
-.input-box input{
-    background: transparent;
-    color: #F2EDE4;
-    width: 250px;
-    padding: 7px;
-    border-radius: 10px;
-    border: 2px solid #6A6869;
-    box-shadow: rgba(7, 7, 7, 0.3) 0px 3px 6px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 4px;
+    #titulo-principal{
+        font-family: var(--fonte-principal);
+        text-align: center;
+        color: #F2EDE4;
+        font-size: 1.8em;
+        margin: 0 0 10px 0;
     
-}
+    }
 
-.input-box input::placeholder{
-    color: #F2EDE4;
-    font-family: var(--fonte-paragrafo);
-}
+    #subtitulo-principal{
+        font-family: var(--fonte-principal);
+        text-align: center;
+        color: #F2EDE4;
+        font-size: 1em;
+        padding: 0;
+    }
 
-.input-box input:focus{
-    outline: none;
-}
-
-.usuario{
-    position: absolute;
-    right: 22%;
-    top: 31%;
-    color: #F2EDE4;
-}
-
-.senha{
-    position: absolute;
-    right: 22%;
-    top: 42%;
-    color: #F2EDE4;
-}
-
-#btlogar{
-    text-align: center;
-}
-
-#btlogar button{
-    width: 250px;
-    margin-top: 15px;
-    border-radius: 7px;
-    border: 2px solid #6A6869;
-    background-color: transparent;
-    color: #F2EDE4;
-    font-size: 13px;
-    cursor: pointer;
-    transition: 0.8s;
-}
-
-#btlogar button:hover{
-    transform: translateY(-10%);
-    box-shadow: rgba(7, 7, 7, 0.3) 0px 3px 6px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 4px;
-}
-
-#btlogar img{
-    width: 28px;
-    height: 28px;
-    text-align: end;
-}
-
-#recupera-senha{
-    font-family: var(--fonte-paragrafo);
-    font-size: 13px;
-    position: relative;
-    left: 50%;
+    .input-box{
+        text-align: center;
+        margin: 20px 0 0 0; 
+    }
     
+    
+    .input-box input{
+        background: transparent;
+        color: #F2EDE4;
+        width: 250px;
+        padding: 13px;
+        border-radius: 10px;
+        border: 2px solid #6A6869;
+        box-shadow: rgba(7, 7, 7, 0.3) 0px 3px 6px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 4px;
+        
+    }
+
+    
+    .input-box input::placeholder{
+        color: #F2EDE4;
+        font-family: var(--fonte-principal);
+    }
+    
+    .input-box input:focus{
+        outline: none;
+    }
+
+    .usuario{
+        display: none;
+    }
+    
+    .senha{
+        display: none;
+    }
+    
+    #btlogar{
+        text-align: center;
+    }
+    
+    #btlogar button{
+        width: 250px;
+        margin: 18px 0 30px 0;
+        padding: 4px;
+        border-radius: 7px;
+        border: 2px solid #0d0d0d2f;
+        background-color: #6A6869;
+        color: #F2EDE4;
+        font-size: 13px;
+        cursor: pointer;
+    
+    }
+    
+    
+    #btlogar img{
+        width: 28px;
+        height: 28px;
+        text-align: end;
+    }
+
+    #cadastra-recupera-mobile{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #cadastra-recupera-mobile a{
+        color: #F2EDE4;
+        text-decoration: none;
+        border-bottom: 2px solid #6A6869;
+    }
+    
+    #recupera-senha{
+        display: none;   
+    }
+
+    #linha-separacao{
+        display: none;
+    }
+    
+    #cadastra{
+        display: none;
+    }
+
 }
 
-#recupera-senha a{
-    color: #F2EDE4;
-    text-decoration: none;
-    transition: 0.8s;
+
+@media screen and (min-width: 768px){
+    body{
+        background: url(../assets/fundo1.jpg) #000 no-repeat bottom ;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #container{
+        backdrop-filter: blur(10px); 
+        border: 2px solid #E0D0C1;
+        border-radius: 5px;
+        box-shadow: rgba(255, 81, 81, 0.24) 0px 3px 8px;
+        width: 420px;
+        height: 400px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-content: center;  
+    }
+    
+    
+    #titulo-principal{
+        font-family: var(--fonte-principal);
+        text-align: center;
+        color: #F2EDE4;
+        font-size: 2em;
+        padding: 10px 0 0 0;
+    
+    }
+    
+    #subtitulo-principal{
+        font-family: var(--fonte-principal);
+        text-align: center;
+        color: #F2EDE4;
+        font-size: 15px;
+        padding: 10px 0;
+    }
+    
+    .input-box{
+        text-align: center;
+        margin: 10px 0 10px 0; 
+    }
+    
+    
+    .input-box input{
+        background: transparent;
+        color: #F2EDE4;
+        width: 250px;
+        padding: 7px;
+        border-radius: 10px;
+        border: 2px solid #6A6869;
+        box-shadow: rgba(7, 7, 7, 0.3) 0px 3px 6px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 4px;
+        
+    }
+    
+    .input-box input::placeholder{
+        color: #F2EDE4;
+        font-family: var(--fonte-principal);
+    }
+    
+    .input-box input:focus{
+        outline: none;
+    }
+    
+    .usuario{
+        position: absolute;
+        right: 22%;
+        top: 30%;
+        color: #F2EDE4;
+    }
+    
+    .senha{
+        position: absolute;
+        right: 22%;
+        top: 41%;
+        color: #F2EDE4;
+    }
+    
+    #btlogar{
+        text-align: center;
+    }
+    
+    #btlogar button{
+        width: 250px;
+        margin-top: 15px;
+        border-radius: 7px;
+        border: 2px solid #6A6869;
+        background-color: transparent;
+        color: #F2EDE4;
+        font-size: 13px;
+        cursor: pointer;
+        transition: 0.8s;
+    }
+    
+    #btlogar button:hover{
+        transform: translateY(-10%);
+        box-shadow: rgba(7, 7, 7, 0.3) 0px 3px 6px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 4px;
+    }
+    
+    #btlogar img{
+        width: 28px;
+        height: 28px;
+        text-align: end;
+    }
+    
+    #recupera-senha-mobile{
+        display: none;
+    }
+    
+    #recupera-senha{
+        font-family: var(--fonte-principal);
+        font-size: 13px;
+        position: relative;
+        left: 50%;
+        
+    }
+    
+    #recupera-senha a{
+        color: #F2EDE4;
+        text-decoration: none;
+        transition: 0.8s;
+    }
+    
+    #recupera-senha a:hover{
+        color: #D92323;
+        border-bottom: 1px solid #D92323;
+        padding-bottom: 1px;
+    }
+    
+    #linha-separacao{
+        border-bottom: 1px solid #b8b8b8;
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+    }
+    
+    #paragrafo-cadastra{
+        font-family: var(--fonte-principal);
+        color: #b8b8b8;
+        text-align: center;
+        padding: 10px 0 16px 0;
+    }
+    
+    #cadastra{
+     text-align: center;
+     margin: 5px 0;
+    }
+    
+    #cadastra button{
+        background: none;
+        border: none;
+    }
+    
+    #cadastra a{
+        color: #F2EDE4;
+        text-decoration: none;
+        font-family: var(--fonte-principal);
+        font-size: 13px;
+        border: 1px solid #6A6869;
+        border-radius: 7px;
+        padding: 10px;
+        transition: 0.6s;
+    }
+    
+    #cadastra a:hover{
+        background: #6A6869;
+        color: #F2EDE4;
+        transform: translateY(-10%);
+        box-shadow: rgba(7, 7, 7, 0.3) 0px 3px 6px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 4px;
+    }
+
+    #cadastra-recupera-mobile{
+        display: none;
+    }
+
 }
 
-#recupera-senha a:hover{
-    color: #D92323;
-    border-bottom: 1px solid #D92323;
-    padding-bottom: 1px;
-}
-
-#linha-separacao{
-    border-bottom: 1px solid #b8b8b8;
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-}
-
-#paragrafo-cadastra{
-    font-family: var(--fonte-titulo);
-    color: #b8b8b8;
-    text-align: center;
-    padding: 10px 0 8px 0;
-}
-
-#cadastra{
- text-align: center;
- margin: 5px 0;
-}
-
-#cadastra button{
-    background: none;
-    border: none;
-}
-
-#cadastra a{
-    color: #F2EDE4;
-    text-decoration: none;
-    font-family: var(--fonte-paragrafo);
-    font-size: 13px;
-    border: 1px solid #6A6869;
-    border-radius: 7px;
-    padding: 10px;
-    transition: 0.6s;
-}
-
-#cadastra a:hover{
-    background: #6A6869;
-    color: #F2EDE4;
-    transform: translateY(-10%);
-    box-shadow: rgba(7, 7, 7, 0.3) 0px 3px 6px 0px, rgba(0, 0, 0, 0.15) 0px 4px 8px 4px;
-}
